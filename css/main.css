@@ -1,0 +1,20 @@
+body {
+  padding-top: 50px;
+}
+.classify-playlist,
+.classify-album,
+.classify-artist {
+  background-color: #F8F8F8;
+  height: 50px;
+  padding-left: 40px;
+  display: none;
+  justify-content: flex-start;
+}
+.classify-playlist span,
+.classify-album span,
+.classify-artist span {
+  flex-basis: 5%;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  align-self: center;
+}
