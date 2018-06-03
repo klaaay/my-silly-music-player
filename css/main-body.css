@@ -1,0 +1,13 @@
+.main-body {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.music-search-area {
+    flex-basis: 68%;
+}
+
+.music-play-area{
+    /* margin-right: 20px; */
+    flex-basis: 32%;
+}
