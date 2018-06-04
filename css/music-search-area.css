@@ -1,0 +1,59 @@
+.music-search-area div {
+    /* border:1px solid gray; */
+}
+li{
+    list-style-type: none;
+}
+.m-cover {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: black;
+}
+
+a:hover{
+    color: red;
+}
+
+a:visited {
+    color: black;
+}
+
+.m-bottom a:link {
+    color: rgb(255, 154, 154);
+}
+
+.m-bottom a:visited {
+    color: white;
+}
+
+.m-bottom {
+    position: absolute;
+    width: 140px;
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+}
+
+.m-bottom a {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+
+.icon-play img {
+    height: 18px;
+}
+
+.m-box-music{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.m-box-music li{
+    margin: 20px 45px;
+}

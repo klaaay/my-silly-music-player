@@ -1,0 +1,45 @@
+.login {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 200px;
+    background: white;
+    border: 1px solid gray;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px #888888;
+}
+
+.login-hd {
+    background: rgb(173, 173, 173);
+    padding: 5px 0;
+}
+
+.login-hd span {
+    font-size: 19px;
+    color: white;
+    font-weight: bold;
+}
+
+.login .fa-times:hover {
+    color: red;
+}
+
+.login .fa-times {
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    margin: 5px;
+    color: white;
+}
+
+.blur {
+    filter: blur(10px);
+}
+
+.login-button{
+    display: flex;
+    padding: 0 15px;
+    justify-content: space-evenly;
+}

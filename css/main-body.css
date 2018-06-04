@@ -1,6 +1,12 @@
 .main-body {
     display: flex;
     justify-content: flex-start;
+    filter: blur(0px);
+    transition:  0.5s;
+}
+
+.main-body:focus{
+    filter: blur(10px);
 }
 
 .music-search-area {

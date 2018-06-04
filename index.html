@@ -6,8 +6,10 @@
     <title>S-M-P</title>
     <link rel="stylesheet" href="css/navigation-bar.css">
     <link rel="stylesheet" href="css/music-play-area.css">
+    <link rel="stylesheet" href="css/music-search-area.css">
     <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/main-body.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_1467430166_4040916.css">
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
@@ -15,6 +17,7 @@
     <link rel="icon" href="img/glee.ico">
     <script src="js/drop-menu.js"></script>
     <script src="js/navigation-bar.js"></script>
+    <script src="js/login.js"></script>
 </head>
 
 <body>
@@ -55,7 +58,7 @@
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#" data-toggle="popover">
+                        <a href="#" data-toggle="popover" id='login'>
                             <i class="fa fa-user" aria-hidden="true" style="padding-right: 10px;"></i>
                             <span>_hi_ha</span>
                         </a>
@@ -102,7 +105,238 @@
     </div>
     <div class="main-body">
         <div class="music-search-area">
-            <p>some thing remain to fill</p>
+            <ul class="m-box-music">
+                <li>
+                    <div class="m-cover">
+                        <a href="#">
+                            <img src="http://p1.music.126.net/NxWVRpD5LnmTq5aG8XD0Xg==/19090820393667452.jpg?param=140y140">
+                        </a>
+                        <a title="复古情歌集°夏日舞步" href="#"></a>
+                        <div class="m-bottom">
+                            <span>1020万</span>
+                            <a class="icon-play" title="播放" href="#">
+                                <img src="./img/glee.ico" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="">
+                        <a title="复古情歌集°夏日舞步" href="#">
+                            复古情歌集°夏日舞步
+                        </a>
+                    </p>
+                </li>
+                <li>
+                    <div class="m-cover">
+                        <a href="#">
+                            <img src="http://p1.music.126.net/NxWVRpD5LnmTq5aG8XD0Xg==/19090820393667452.jpg?param=140y140">
+                        </a>
+                        <a title="复古情歌集°夏日舞步" href="#"></a>
+                        <div class="m-bottom">
+                            <span>1020万</span>
+                            <a class="icon-play" title="播放" href="#">
+                                <img src="./img/glee.ico" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="">
+                        <a title="复古情歌集°夏日舞步" href="#">
+                            复古情歌集°夏日舞步
+                        </a>
+                    </p>
+                </li>
+                <li>
+                    <div class="m-cover">
+                        <a href="#">
+                            <img src="http://p1.music.126.net/NxWVRpD5LnmTq5aG8XD0Xg==/19090820393667452.jpg?param=140y140">
+                        </a>
+                        <a title="复古情歌集°夏日舞步" href="#"></a>
+                        <div class="m-bottom">
+                            <span>1020万</span>
+                            <a class="icon-play" title="播放" href="#">
+                                <img src="./img/glee.ico" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="">
+                        <a title="复古情歌集°夏日舞步" href="#">
+                            复古情歌集°夏日舞步
+                        </a>
+                    </p>
+                </li>
+                <li>
+                    <div class="m-cover">
+                        <a href="#">
+                            <img src="http://p1.music.126.net/NxWVRpD5LnmTq5aG8XD0Xg==/19090820393667452.jpg?param=140y140">
+                        </a>
+                        <a title="复古情歌集°夏日舞步" href="#"></a>
+                        <div class="m-bottom">
+                            <span>1020万</span>
+                            <a class="icon-play" title="播放" href="#">
+                                <img src="./img/glee.ico" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="">
+                        <a title="复古情歌集°夏日舞步" href="#">
+                            复古情歌集°夏日舞步
+                        </a>
+                    </p>
+                </li>
+                <li>
+                    <div class="m-cover">
+                        <a href="#">
+                            <img src="http://p1.music.126.net/NxWVRpD5LnmTq5aG8XD0Xg==/19090820393667452.jpg?param=140y140">
+                        </a>
+                        <a title="复古情歌集°夏日舞步" href="#"></a>
+                        <div class="m-bottom">
+                            <span>1020万</span>
+                            <a class="icon-play" title="播放" href="#">
+                                <img src="./img/glee.ico" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="">
+                        <a title="复古情歌集°夏日舞步" href="#">
+                            复古情歌集°夏日舞步
+                        </a>
+                    </p>
+                </li>
+                <li>
+                    <div class="m-cover">
+                        <a href="#">
+                            <img src="http://p1.music.126.net/NxWVRpD5LnmTq5aG8XD0Xg==/19090820393667452.jpg?param=140y140">
+                        </a>
+                        <a title="复古情歌集°夏日舞步" href="#"></a>
+                        <div class="m-bottom">
+                            <span>1020万</span>
+                            <a class="icon-play" title="播放" href="#">
+                                <img src="./img/glee.ico" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="">
+                        <a title="复古情歌集°夏日舞步" href="#">
+                            复古情歌集°夏日舞步
+                        </a>
+                    </p>
+                </li>
+                <li>
+                    <div class="m-cover">
+                        <a href="#">
+                            <img src="http://p1.music.126.net/NxWVRpD5LnmTq5aG8XD0Xg==/19090820393667452.jpg?param=140y140">
+                        </a>
+                        <a title="复古情歌集°夏日舞步" href="#"></a>
+                        <div class="m-bottom">
+                            <span>1020万</span>
+                            <a class="icon-play" title="播放" href="#">
+                                <img src="./img/glee.ico" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="">
+                        <a title="复古情歌集°夏日舞步" href="#">
+                            复古情歌集°夏日舞步
+                        </a>
+                    </p>
+                </li>
+                <li>
+                    <div class="m-cover">
+                        <a href="#">
+                            <img src="http://p1.music.126.net/NxWVRpD5LnmTq5aG8XD0Xg==/19090820393667452.jpg?param=140y140">
+                        </a>
+                        <a title="复古情歌集°夏日舞步" href="#"></a>
+                        <div class="m-bottom">
+                            <span>1020万</span>
+                            <a class="icon-play" title="播放" href="#">
+                                <img src="./img/glee.ico" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="">
+                        <a title="复古情歌集°夏日舞步" href="#">
+                            复古情歌集°夏日舞步
+                        </a>
+                    </p>
+                </li>
+                <li>
+                    <div class="m-cover">
+                        <a href="#">
+                            <img src="http://p1.music.126.net/NxWVRpD5LnmTq5aG8XD0Xg==/19090820393667452.jpg?param=140y140">
+                        </a>
+                        <a title="复古情歌集°夏日舞步" href="#"></a>
+                        <div class="m-bottom">
+                            <span>1020万</span>
+                            <a class="icon-play" title="播放" href="#">
+                                <img src="./img/glee.ico" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="">
+                        <a title="复古情歌集°夏日舞步" href="#">
+                            复古情歌集°夏日舞步
+                        </a>
+                    </p>
+                </li>
+                <li>
+                    <div class="m-cover">
+                        <a href="#">
+                            <img src="http://p1.music.126.net/NxWVRpD5LnmTq5aG8XD0Xg==/19090820393667452.jpg?param=140y140">
+                        </a>
+                        <a title="复古情歌集°夏日舞步" href="#"></a>
+                        <div class="m-bottom">
+                            <span>1020万</span>
+                            <a class="icon-play" title="播放" href="#">
+                                <img src="./img/glee.ico" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="">
+                        <a title="复古情歌集°夏日舞步" href="#">
+                            复古情歌集°夏日舞步
+                        </a>
+                    </p>
+                </li>
+                <li>
+                    <div class="m-cover">
+                        <a href="#">
+                            <img src="http://p1.music.126.net/NxWVRpD5LnmTq5aG8XD0Xg==/19090820393667452.jpg?param=140y140">
+                        </a>
+                        <a title="复古情歌集°夏日舞步" href="#"></a>
+                        <div class="m-bottom">
+                            <span>1020万</span>
+                            <a class="icon-play" title="播放" href="#">
+                                <img src="./img/glee.ico" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="">
+                        <a title="复古情歌集°夏日舞步" href="#">
+                            复古情歌集°夏日舞步
+                        </a>
+                    </p>
+                </li>
+                <li>
+                    <div class="m-cover">
+                        <a href="#">
+                            <img src="http://p1.music.126.net/NxWVRpD5LnmTq5aG8XD0Xg==/19090820393667452.jpg?param=140y140">
+                        </a>
+                        <a title="复古情歌集°夏日舞步" href="#"></a>
+                        <div class="m-bottom">
+                            <span>1020万</span>
+                            <a class="icon-play" title="播放" href="#">
+                                <img src="./img/glee.ico" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="">
+                        <a title="复古情歌集°夏日舞步" href="#">
+                            复古情歌集°夏日舞步
+                        </a>
+                    </p>
+                </li>
+
+            </ul>
+
         </div>
         <div class="music-play-area">
             <div class="wrapper">
@@ -145,6 +379,19 @@
                         <span class="m-icon m-lyric colored lyriced"></span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="login" style="display: none;">
+        <div class="login-hd text-center">
+            <span>&nbsp登陆</span>
+        </div>
+        <div class="login-id">
+            <input type="text" placeholder="用户名" class="form-control" style="position: relative; width: 80%; left: 10%;margin: 30px 0;">
+            <div class="login-button">
+                <button class="btn login-button-login">登陆</button>
+                <button class="btn login-button-close">关闭</button>
             </div>
         </div>
     </div>
