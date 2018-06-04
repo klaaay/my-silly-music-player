@@ -1,0 +1,19 @@
+.search-result thead th:nth-child(1) {
+    width: 50%;
+}
+
+.search-result thead th:nth-child(2) {
+    width: 20%;
+}
+
+.search-result thead th:nth-child(3) {
+    width: 30%;
+}
+
+.search-result tbody tr:nth-child(even) {
+    background-color: #F8F8F8;
+}
+
+.search-result tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
