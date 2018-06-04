@@ -1,7 +1,7 @@
 var drop_menu = '<table class="drop-menu" style="width:275px;font-family: Verdana, sans-serif;background-color: white;">' +
     '<tr style="display: flex;margin-bottom: 10px;padding-top:5px;">' +
     '<td>' +
-    '<img src="../MySillyMusicPlayer/img/test.png" class="img-circle" style="width:30px;height: 30px;margin-left: 20px;">' +
+    '<img src="img/test.png" class="img-circle" style="width:30px;height: 30px;margin-left: 20px;">' +
     '<span>_hi_ha</span>' +
     '</td>' +
     '<td style="flex-grow: 2;visibility: hidden;"></td>' +
