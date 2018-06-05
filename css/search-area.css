@@ -24,6 +24,10 @@
     background-color: #FFFFFF;
 }
 
+.search-result tbody tr:hover{
+    opacity: 0.5;
+}
+
 ::-webkit-scrollbar {
     background-color: #fff;
     width: 5px;

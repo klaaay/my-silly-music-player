@@ -43,11 +43,13 @@
 
 .background .music-lyric ul {
     position: relative;
+    top:10px;
     transition: all 1s;
 }
 
 .lyric li {
     padding: 5px 0 2px 0;
+    list-style-type: none;
     position: relative;
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
@@ -121,13 +123,13 @@ span.colored, a.colored {
     color: #cdd2d7;
 }
 
-/* span.stared {
-    color: #feec98
+span.stared {
+    color: #feec98!important;
 }
 
 span.loved {
-    color: #fe8698
-} */
+    color: #fe8698!important;
+}
 
 .content .music-icon span:hover {
     text-shadow: 1px 1px 1px #ccc;
