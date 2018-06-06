@@ -1,7 +1,9 @@
+var num = 30;
+
 var drop_menu = '<table class="drop-menu" style="width:275px;font-family: Verdana, sans-serif;background-color: white;">' +
     '<tr style="display: flex;margin-bottom: 10px;padding-top:5px;">' +
     '<td>' +
-    '<img src="img/test.png" class="img-circle" style="width:30px;height: 30px;margin-left: 20px;">' +
+    '<img src="../MySillyMusicPlayer/img/test.png" class="img-circle" style="width:30px;height: 30px;margin-left: 20px;">' +
     '<span>_hi_ha</span>' +
     '</td>' +
     '<td style="flex-grow: 2;visibility: hidden;"></td>' +
@@ -16,7 +18,7 @@ var drop_menu = '<table class="drop-menu" style="width:275px;font-family: Verdan
     '<span>动态</span>' +
     '  </td>' +
     '<td style="flex-basis: 40%;border-right: 1px solid #e9e9e9;">' +
-    ' <span style="font-weight:bold;">25</span>' +
+    ' <span style="font-weight:bold;">' + num + '</span>' +
     ' <br>' +
     '<span>关注</span>' +
     ' </td>' +

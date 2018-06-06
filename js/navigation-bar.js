@@ -3,12 +3,17 @@ $(document).ready(function(){
     $all_classify = $('.classify-playlist,.classify-album,.classify-artist');
     $all.click(function(){
         var text = $(this).attr('id');
-        // console.log(text);
+        console.log(text);
         $all.removeClass('active');
         $(this).addClass('active');
         console.log('.classify-' + text);
         $all_classify.css('display','none');
         $('.classify-'+text).css('display','flex');
+    })
+
+    $('#artist').click(function(){
+        $('.search-result').css('display', 'none');
+        top_artists();
     })
 
     $('[data-toggle="popover"').each(function(){

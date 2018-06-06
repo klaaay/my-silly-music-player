@@ -1,0 +1,26 @@
+#top-artists {
+  display: flex;
+  flex-wrap: wrap;
+  height: 600px;
+  overflow: auto;
+}
+#top-artists .top-singer {
+  width: 200px;
+  height: 200px;
+  background-color: #ebebeb;
+  cursor: pointer;
+  margin: 25px;
+  margin-bottom: 0;
+  border-radius: 5px;
+  border: solid 1px #cacaca;
+}
+#top-artists .top-singer i {
+  position: relative;
+  opacity: 0;
+  top: -50px;
+  left: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.shadow {
+  box-shadow: 0px 6px 7px #999;
+}

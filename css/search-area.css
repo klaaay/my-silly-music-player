@@ -1,5 +1,5 @@
 .search-result {
-    display: block;
+    display: none;
     height: 600px;
     overflow: auto;
 }
