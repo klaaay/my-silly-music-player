@@ -41,11 +41,10 @@ function showLyric() {
     }
 }
 
-//歌曲时间控制
+//歌曲时间显示
 function showSongTime() {
     var currentTime = myAudio.currentTime;
     var minutes = parseInt(currentTime / 60);
-    // console.log(minutes);
     var seconds = parseInt(currentTime - (minutes * 60));
     if (minutes >= 10) {
         $('.basebar .song-minutes').text(minutes + ':');
@@ -57,7 +56,6 @@ function showSongTime() {
     } else {
         $('.basebar .song-seconds').text(seconds);
     }
-    // console.log(currentTime);
 }
 
 setInterval(present, 500)	//每0.5秒计算进度条长度

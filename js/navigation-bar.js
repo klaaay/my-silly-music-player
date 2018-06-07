@@ -1,41 +1,29 @@
-$(document).ready(function(){
+$(document).ready(function () {
+    //导航条按钮
     $all = $('#playlist,#album,#artist');
     $all_classify = $('.classify-playlist,.classify-album,.classify-artist');
-    $all.click(function(){
+    $all.click(function () {
         var text = $(this).attr('id');
-        console.log(text);
         $all.removeClass('active');
         $(this).addClass('active');
-        console.log('.classify-' + text);
-        $all_classify.css('display','none');
-        $('.classify-'+text).css('display','flex');
+        $all_classify.css('display', 'none');
+        $('.classify-' + text).css('display', 'flex');
     })
-
-    $('#artist').click(function(){
+    //热门歌手
+    $('#artist').click(function () {
         $('.search-result').css('display', 'none');
+        $('.hot-artists-area').empty();
         top_artists();
     })
-
-    $('[data-toggle="popover"').each(function(){
+    //登陆信息下拉框
+    $('[data-toggle="popover"').each(function () {
         var element = $(this);
         element.popover({
-            trigger:"focus",
-            placement:"bottom",
-            title:"",
-            html:"true",
-            content:ContentMethod(),
+            trigger: "focus",
+            placement: "bottom",
+            title: "",
+            html: "true",
+            content: ContentMethod(),
         })
     })
-    // .on("mouseenter",function(){
-    //     var _this = this;
-    //     $(this).popover("show");
-    // })
-    // .on("mouseleave",function(){
-    //     var _this = this;
-    //     setTimeout(function(){
-    //         // if(!$(".popover:hover").length){
-    //             $(_this).popover("hide")
-    //         // };
-    //     },100);
-    // });
 });
