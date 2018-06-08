@@ -1,0 +1,46 @@
+.commend-playlist-area {
+    height: 600px;
+    overflow: auto;
+    .heading {
+        display: flex;
+        justify-content: flex-start;
+        .img-area {
+            flex-basis: 40%;
+            img {
+                width: 200px;
+                height: 200px;
+                margin-left: 50px; // box-shadow: 0px 2px 2px #999;
+            } // img:hover {
+            //     box-shadow: 0px 6px 7px #999;
+            // }
+        }
+        .information {
+            flex-basis: 60%;
+            align-self: center;
+            h3{
+                font-weight: bold;
+                padding-bottom:15px;
+            }
+            p{
+                padding-left:20px;
+            }
+            span {
+                position: relative;
+                top: 40px;
+                left: 480px;
+                color: #575757;
+            }
+        }
+    }
+    .body {
+        table {
+            margin-top: 30px;
+            tr{
+              td:nth-child(1){
+                  width: 75%;
+                  padding-left: 50px;
+              }  
+            }
+        }
+    }
+}

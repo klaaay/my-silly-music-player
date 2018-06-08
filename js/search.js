@@ -15,16 +15,7 @@ $(document).ready(function () {
         //获取显示相应的歌词
         get_lyrics(song_id);
     });
-    $('.search-button').click(function (event) {
-        $('.search-result').css('display', 'block');
-        var text = $('.search-box').val();
-        var $tbody = $('tbody');
-        $tbody.empty();
-        //获取和显示搜索列表
-        search_songs(text, $tbody);
-    })
 })
-
 //获取专辑图片
 function found_album_pic(album_id) {
     $.ajax({
@@ -42,7 +33,6 @@ function found_album_pic(album_id) {
         }
     })
 }
-
 //播放选中歌曲
 function play_selected_song(song_id, song_name, song_artist, song_album) {
     $.ajax({
@@ -60,7 +50,6 @@ function play_selected_song(song_id, song_name, song_artist, song_album) {
         }
     })
 };
-
 //获取显示相应的歌词
 function get_lyrics(song_id) {
     $.ajax({
@@ -110,7 +99,6 @@ function get_lyrics(song_id) {
         }
     })
 };
-
 //获取和显示搜索列表
 function search_songs(text, $tbody) {
     $.ajax({

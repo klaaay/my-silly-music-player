@@ -5,7 +5,7 @@ $(document).ready(function () {
         $(this).toggleClass("shadow");
     })
     //双击实现歌手电台的播放
-    $('body').on('dblclick','.top-singer',function(){
+    $('body').on('dblclick', '.top-singer', function () {
         var singer_id = $(this).attr("data-id");
         var song_artist = $(this).attr("data-name");
         // console.log(song_artist);
@@ -13,8 +13,8 @@ $(document).ready(function () {
         var song_id;
         $.ajax({
             url: "http://localhost:3000/artists?id=" + singer_id,
-            type:"GET",
-            success:function(result){
+            type: "GET",
+            success: function (result) {
                 result = JSON.parse(result);
                 // console.log(result.hotSongs);
                 var i = Math.floor(Math.random() * (result.hotSongs.length - 0 + 1) + 0);
@@ -52,20 +52,19 @@ function top_artists() {
             result = JSON.parse(result);
             // console.log(result);
             var artists = result.artists;
-            var $top_six_singer =  $('.classify-artist span');
-            for(var i = 0;i < 6;i++){
+            var $top_six_singer = $('.classify-artist span');
+            for (var i = 0; i < 6; i++) {
                 $top_six_singer.eq(i).text(artists[i].name);
             }
             // console.log(artists[0].name);
             var $top_artists = $('<div id="top-artists"></div>');
             artists.forEach(function (item, index, array) {
                 // console.log(item.id);
-                var $top_singer = $('<div class="top-singer" data-id="' + item.id + '" data-name="' + item.name + '" data-picUrl="' + item.picUrl+'" ></div>');
+                var $top_singer = $('<div class="top-singer" data-id="' + item.id + '" data-name="' + item.name + '" data-picUrl="' + item.picUrl + '" data-toggle="tooltip" data-placement="top" title="' + item.name + '" ></div>');
                 $top_singer.append('<img src="' + item.picUrl + '" alt="" width="200px" height="200px" class="img-rounded"><i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i>').appendTo($top_artists);
             })
             $('.hot-artists-area').append($top_artists);
+            $('[data-toggle="tooltip"]').tooltip();
         }
     })
 }
-
-
