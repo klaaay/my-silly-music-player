@@ -58,12 +58,22 @@ function showSongTime() {
     }
 }
 
+//显示播放届面的图片
+function showImg(url){
+    $(".background").css({
+        'background': 'url(' + url + ')',
+        'background-repeat': 'no-repeat',
+        'background-position': 'center',
+        'background-size': 'cover',
+    });
+}
+
 setInterval(present, 500)	//每0.5秒计算进度条长度
 $(".basebar").mousedown(function (ev) {  //拖拽进度条控制进度
     var posX = ev.clientX;
     var targetLeft = $(this).offset().left;
     var percentage = (posX - targetLeft) / 400 * 100;
-    console.log(myAudio.duration);
+    // console.log(myAudio.duration);
     myAudio.currentTime = myAudio.duration * percentage / 100;
 });
 function present() {

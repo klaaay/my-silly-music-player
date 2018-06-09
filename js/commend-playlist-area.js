@@ -3,16 +3,27 @@ $(document).ready(function () {
         $(".commend-img").removeClass("shadow");
         $(this).toggleClass("shadow");
     });
+    $('body').on('dblclick', '.commend-song', function () {
+        var song_id = $(this).attr("data-id");
+        var song_name = $(this).attr("data-name");
+        var song_artist = $(this).attr("data-artist");
+        var list_imgurl = $(this).attr("data-imgurl");
+        var song_album = "";
+        showImg(list_imgurl);
+        //播放选中歌曲
+        play_selected_song(song_id, song_name, song_artist, song_album);
+        //获取显示相应的歌词
+        get_lyrics(song_id);
+    })
 })
-
-function get_hot_playlists(){
+function get_hot_playlists() {
     $.ajax({
         url: "http://localhost:3000/personalized",
         type: "GET",
         success: function (data) {
             data = JSON.parse(data);
             result = data.result;
-            console.log(result);
+            // console.log(result);
             //获取歌单及歌单的信息创建歌单DOM
             var $accordion = $('<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"></div>');
             result.forEach(function (item, index, array) {
@@ -35,7 +46,7 @@ function get_hot_playlists(){
                         //获取歌单详情创建歌曲信息的DOM
                         var $panel_body = $('<div class="panel-body"></div>');
                         var $table = $('<table class="table"></table>');
-                        for (var i = 0; i < 10; i++) {
+                        for (var i = 0; i < (list.length >= 10 ? 10 : list.length); i++) {
                             var artist_name = list[i].artists[0].name;
                             var song_id = list[i].id;
                             var song_name = list[i].name;
@@ -43,7 +54,7 @@ function get_hot_playlists(){
                             var min = parseInt(duration / 60);
                             var second = parseInt(duration - (min * 60));
                             second = second < 10 ? ('0' + second) : second;
-                            var $tr = $('<tr></tr>').append('<td>' + (i + 1) + '&nbsp;&nbsp;' + song_name + '</td><td>' + artist_name + '</td><td>' + min + ':' + second + '</td>');
+                            var $tr = $('<tr class="commend-song" data-id="' + song_id + '" data-artist="' + artist_name + '" data-name="' + song_name + '"  data-imgurl ="' + picUrl + '"></tr>').append('<td>' + (i + 1) + '&nbsp;&nbsp;' + song_name + '</td><td>' + artist_name + '</td><td>' + min + ':' + second + '</td>');
                             $tr.appendTo($table);
                         }
                         $table.appendTo($panel_body);
@@ -54,7 +65,7 @@ function get_hot_playlists(){
                     }
                 })
             })
-            console.log($accordion);
+            // console.log($accordion);
             $('.commend-playlist-area').append($accordion);
         }
     })

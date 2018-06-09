@@ -11,33 +11,20 @@ $(document).ready(function () {
     })
     //推荐歌单
     $('#playlist').click(function () {
-        $('.commend-playlist-area').css('display', 'block');
-        $('.search-result').css('display', 'none');
-        $('.hot-artists-area').css('display', 'none');
-        $('.hot-artists-area').empty();
-        $('.commend-playlist-area').empty();
+        hide_and_show('commend-playlist-area');
         get_hot_playlists();
-    })
-
+    });
     //热门歌手
     $('#artist').click(function () {
-        $('.hot-artists-area').css('display', 'block');
-        $('.search-result').css('display', 'none');
-        $('.commend-playlist-area').css('display', 'none');
-        $('.hot-artists-area').empty();
-        $('.commend-playlist-area').empty();
+        hide_and_show('hot-artists-area');
         top_artists();
-    })
+    });
     //歌曲搜索
     $('.search-button').click(function (event) {
-        $('.search-result').css('display', 'block');
-        $('.hot-artists-area').css('display', 'none');
-        $('.commend-playlist-area').css('display', 'none');
+        hide_and_show('search-result');
         var text = $('.search-box').val();
         var $tbody = $('tbody');
         $tbody.empty();
-        $('.hot-artists-area').empty();
-        $('.commend-playlist-area').empty();
         //获取和显示搜索列表
         if (text) {
             search_songs(text, $tbody);
@@ -61,3 +48,11 @@ $(document).ready(function () {
         })
     })
 });
+function hide_and_show(text) {
+    $('.commend-playlist-area').css('display', 'none');
+    $('.search-result').css('display', 'none');
+    $('.hot-artists-area').css('display', 'none');
+    $('.' + text).css('display', 'block');
+    $('.hot-artists-area').empty();
+    $('.commend-playlist-area').empty();
+}

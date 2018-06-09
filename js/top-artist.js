@@ -11,28 +11,7 @@ $(document).ready(function () {
         // console.log(song_artist);
         var picUrl = $(this).attr("data-picUrl");
         var song_id;
-        $.ajax({
-            url: "http://localhost:3000/artists?id=" + singer_id,
-            type: "GET",
-            success: function (result) {
-                result = JSON.parse(result);
-                // console.log(result.hotSongs);
-                var i = Math.floor(Math.random() * (result.hotSongs.length - 0 + 1) + 0);
-                song_id = result.hotSongs[i].privilege.id;
-                var song_name = result.hotSongs[i].name;
-                var song_album = "";
-                // console.log(song_id);
-                // console.log(song_name);
-                $(".background").css({
-                    'background': 'url(' + picUrl + ')',
-                    'background-repeat': 'no-repeat',
-                    'background-position': 'center',
-                    'background-size': 'cover',
-                });
-                play_selected_song(song_id, song_name, song_artist, song_album);
-                get_lyrics(song_id);
-            }
-        })
+        random_artists_song_play(singer_id, song_artist, picUrl, song_id);
     })
     $('body').on('mouseenter mouseleave', 'div.top-singer', function (event) {
         var $icon = $(this).find('i');
@@ -65,6 +44,24 @@ function top_artists() {
             })
             $('.hot-artists-area').append($top_artists);
             $('[data-toggle="tooltip"]').tooltip();
+        }
+    })
+}
+
+function random_artists_song_play(singer_id, song_artist, picUrl, song_id) {
+    $.ajax({
+        url: "http://localhost:3000/artists?id=" + singer_id,
+        type: "GET",
+        success: function (result) {
+            result = JSON.parse(result);
+            // console.log(result.hotSongs);
+            var i = Math.floor(Math.random() * (result.hotSongs.length - 0 + 1) + 0);
+            song_id = result.hotSongs[i].privilege.id;
+            var song_name = result.hotSongs[i].name;
+            var song_album = "";
+            showImg(picUrl);
+            play_selected_song(song_id, song_name, song_artist, song_album);
+            get_lyrics(song_id);
         }
     })
 }

@@ -24,12 +24,7 @@ function found_album_pic(album_id) {
         success: function (result) {
             result = JSON.parse(result);
             var album_pic_url = result.songs[0].al.picUrl;
-            $(".background").css({
-                'background': 'url(' + album_pic_url + ')',
-                'background-repeat': 'no-repeat',
-                'background-position': 'center',
-                'background-size': 'cover',
-            });
+            showImg(album_pic_url);
         }
     })
 }

@@ -38,3 +38,7 @@
   width: 75%;
   padding-left: 50px;
 }
+.commend-playlist-area .body table tr:hover {
+  background-color: #F7F7F9;
+  opacity: 0.6;
+}
