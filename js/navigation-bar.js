@@ -1,5 +1,11 @@
 $(document).ready(function () {
     //导航条按钮
+    $('.commend-playlist-area').css('display', 'none');
+    $('.search-result').css('display', 'none');
+    $('.hot-artists-area').css('display', 'none');
+    $('.new-album-area').css('display', 'none');
+
+
     $all = $('#playlist,#album,#artist');
     $all_classify = $('.classify-playlist,.classify-album,.classify-artist');
     $all.click(function () {
@@ -14,6 +20,11 @@ $(document).ready(function () {
         hide_and_show('commend-playlist-area');
         get_hot_playlists();
     });
+    //新专辑
+    $('#album').click(function(){
+        hide_and_show('new-album-area');
+        get_new_albums();
+    })
     //热门歌手
     $('#artist').click(function () {
         hide_and_show('hot-artists-area');
@@ -52,7 +63,9 @@ function hide_and_show(text) {
     $('.commend-playlist-area').css('display', 'none');
     $('.search-result').css('display', 'none');
     $('.hot-artists-area').css('display', 'none');
+    $('.new-album-area').css('display', 'none');
     $('.' + text).css('display', 'block');
     $('.hot-artists-area').empty();
     $('.commend-playlist-area').empty();
+    $('.new-album-area').empty();
 }
