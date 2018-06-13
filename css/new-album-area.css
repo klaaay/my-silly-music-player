@@ -23,7 +23,6 @@
 }
 .new-album-area #new-albums .new-album .img-area .img:hover {
   box-shadow: 0px 0px 6px white;
-  animation: rotate 5s infinite linear;
 }
 .new-album-area #new-albums .new-album .descripation {
   position: relative;
@@ -35,6 +34,20 @@
 }
 .new-album-area #new-albums .new-album .descripation span i {
   padding-right: 5px;
+}
+.new-album-area #new-albums .comment-area {
+  margin-bottom: 5px;
+}
+.new-album-area #new-albums .comment-area tr td:nth-child(1) {
+  width: 80px;
+}
+.new-album-area #new-albums .comment-area tr td:nth-child(1) img {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
+.new-album-area #new-albums .comment-area tr td:nth-child(2) .time {
+  color: #ccc;
 }
 @keyframes rotate {
   from {

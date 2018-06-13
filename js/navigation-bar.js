@@ -1,10 +1,11 @@
 $(document).ready(function () {
-    //导航条按钮
+    // 导航条按钮
     $('.commend-playlist-area').css('display', 'none');
     $('.search-result').css('display', 'none');
     $('.hot-artists-area').css('display', 'none');
     $('.new-album-area').css('display', 'none');
-
+    hide_and_show('commend-playlist-area');
+    get_hot_playlists();
 
     $all = $('#playlist,#album,#artist');
     $all_classify = $('.classify-playlist,.classify-album,.classify-artist');
@@ -41,7 +42,22 @@ $(document).ready(function () {
             search_songs(text, $tbody);
         }
     })
+    $('body').keydown(function (e) {   
+        var keycode = e.keyCode || e.which;  
+        var name = $(e.target).attr('name')
+        if (name === 'searchBox') {
+           if (keycode == 13) {
+               e.preventDefault();
+               e.stopPropagation();
+                $('.search-button').trigger('click');
+            } 
+        }else {
+            return false;
+        }
+    });
     $('.search-box').keyup(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
         var keycode = e.which;
         if (keycode == 13) {
             $('.search-button').trigger('click');
