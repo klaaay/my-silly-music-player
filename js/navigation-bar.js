@@ -42,7 +42,7 @@ $(document).ready(function () {
             search_songs(text, $tbody);
         }
     })
-    $('body').keydown(function (e) {   
+    /*$('body').keydown(function (e) {   
         var keycode = e.keyCode || e.which;  
         var name = $(e.target).attr('name')
         if (name === 'searchBox') {
@@ -62,18 +62,7 @@ $(document).ready(function () {
         if (keycode == 13) {
             $('.search-button').trigger('click');
         }
-    });
-    //登陆信息下拉框
-    $('[data-toggle="popover"').each(function () {
-        var element = $(this);
-        element.popover({
-            trigger: "focus",
-            placement: "bottom",
-            title: "",
-            html: "true",
-            content: ContentMethod(),
-        })
-    })
+    });*/
 });
 function hide_and_show(text) {
     $('.commend-playlist-area').css('display', 'none');

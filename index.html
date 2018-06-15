@@ -15,11 +15,16 @@
     <link rel="stylesheet" href="css/top-artists.css">
     <link rel="stylesheet" href="css/commend-playlist-area.css">
     <link rel="stylesheet" href="css/new-album-area.css">
+    <link rel="stylesheet" href="css/drop-menu.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_1467430166_4040916.css">
     <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
 
     <script src="lib/jquery.min.js"></script>
     <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/ajaxLogin.js"></script>
+    <script src="js/drop-menu.js"></script>
     <script src="js/drop-menu.js"></script>
 </head>
 
@@ -61,19 +66,9 @@
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#" data-toggle="popover">
+                        <a href="#" data-toggle="popover" data-placement="left" id='login'>
                             <i class="fa fa-user" aria-hidden="true" style="padding-right: 10px;"></i>
-                            <span>_hi_ha</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <span>Sign in</span>
                         </a>
                     </li>
                 </ul>
@@ -215,6 +210,22 @@
                 </div>
             </div>
         </div>
+
+        <div class="login" style="display: none;">
+        <div class="login-title text-center">
+            <span>Sign in to Music</span>
+        </div>
+        <div class="login-content">
+            <form action="">
+                <input type="text" id="input-phone" class="form-control" placeholder="Cellphone number" required>
+                <input type="password" id="input-password" class="form-control" placeholder="Password" required>
+                <div class="login-button">
+                    <button type='submit' class="btn btn-success" type="button">Sign in</button>
+                    <button class="btn btn-danger" type="button">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
     </div>
     <script src="js/music-play-area.js"></script>
     <script src="js/search.js"></script>
