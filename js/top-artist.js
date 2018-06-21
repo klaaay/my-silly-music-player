@@ -25,7 +25,8 @@ $(document).ready(function () {
 function top_artists() {
     //获取热门歌手信息动态生成DOM
     $.ajax({
-        url: "http://localhost:3000/top/artists?offset=0&limit=300",
+        // url: "http://localhost:3000/top/artists?offset=0&limit=300",
+        url: "http://119.23.201.7:3000/top/artists?offset=0&limit=300",
         type: "GET",
         success: function (result) {
             result = JSON.parse(result);
@@ -50,7 +51,8 @@ function top_artists() {
 
 function random_artists_song_play(singer_id, song_artist, picUrl, song_id) {
     $.ajax({
-        url: "http://localhost:3000/artists?id=" + singer_id,
+        // url: "http://localhost:3000/artists?id=" + singer_id,
+        url: "http://119.23.201.7:3000/artists?id=" + singer_id,
         type: "GET",
         success: function (result) {
             result = JSON.parse(result);

@@ -18,7 +18,8 @@ $(document).ready(function () {
 })
 function get_hot_playlists() {
     $.ajax({
-        url: "http://localhost:3000/personalized",
+        // url: "http://localhost:3000/personalized",
+        url: "http://119.23.201.7:3000/personalized",
         type: "GET",
         success: function (data) {
             data = JSON.parse(data);
@@ -38,7 +39,8 @@ function get_hot_playlists() {
                 var $image_information = $('<div class="img-area" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + index + '" aria-expanded="false" aria-controls="collapse' + index + '"><img src="' + picUrl + '" alt="" class="img-rounded commend-img"></div><div class="information"><h3>' + name + '</h3><p>"' + description + '"</p><span>播放次数:' + counts + '次</span></div>');
                 $image_information.appendTo($heading);
                 $.ajax({
-                    url: "http://localhost:3000/playlist/detail?id=" + id,
+                    // url: "http://localhost:3000/playlist/detail?id=" + id,
+                    url: "http://119.23.201.7:3000/playlist/detail?id=" + id,
                     type: "GET",
                     success: function (data) {
                         data = JSON.parse(data);

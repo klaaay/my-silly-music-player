@@ -7,7 +7,8 @@ $(document).ready(function () {
 
 function get_new_albums() {
     $.ajax({
-        url: "http://localhost:3000/top/album?offset=0&limit=30",
+        // url: "http://localhost:3000/top/album?offset=0&limit=30",
+        url: "http://119.23.201.7:3000/top/album?offset=0&limit=30",
         type: "GET",
         success: function (data) {
             data = JSON.parse(data);
@@ -46,7 +47,8 @@ function get_new_albums() {
 
 function get_album_comments(id, $table, $content) {
     $.ajax({
-        url: "http://localhost:3000/comment/album?id=" + id,
+        // url: "http://localhost:3000/comment/album?id=" + id,
+        url: "http://119.23.201.7:3000/comment/album?id=" + id,
         type: "GET",
         success: function (data) {
             data = JSON.parse(data);

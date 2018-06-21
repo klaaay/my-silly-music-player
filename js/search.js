@@ -19,7 +19,8 @@ $(document).ready(function () {
 //获取专辑图片
 function found_album_pic(album_id) {
     $.ajax({
-        url: "http://localhost:3000/album?id=" + album_id,
+        // url: "http://localhost:3000/album?id=" + album_id,
+        url: "http://119.23.201.7:3000/album?id=" + album_id,
         type: "GET",
         success: function (result) {
             result = JSON.parse(result);
@@ -31,7 +32,8 @@ function found_album_pic(album_id) {
 //播放选中歌曲
 function play_selected_song(song_id, song_name, song_artist, song_album) {
     $.ajax({
-        url: "http://localhost:3000/music/url?id=" + song_id,
+        // url: "http://localhost:3000/music/url?id=" + song_id,
+        url: "http://119.23.201.7:3000/music/url?id=" + song_id,
         type: "GET",
         success: function (result) {
             var song_url = result.data[0].url;
@@ -48,7 +50,8 @@ function play_selected_song(song_id, song_name, song_artist, song_album) {
 //获取显示相应的歌词
 function get_lyrics(song_id) {
     $.ajax({
-        url: "http://localhost:3000/lyric?id=" + song_id,
+        // url: "http://localhost:3000/lyric?id=" + song_id,
+        url: "http://119.23.201.7:3000/lyric?id=" + song_id,
         type: "GET",
         success: function (lyr) {
             var lyr = JSON.parse(lyr);
@@ -97,37 +100,42 @@ function get_lyrics(song_id) {
 //获取和显示搜索列表
 function search_songs(text, $tbody) {
     $.ajax({
-        url: "http://localhost:3000/search?keywords=" + text,
+        // url: "http://localhost:3000/search?keywords=" + text,
+        url: "http://119.23.201.7:3000/search?keywords=" + text,
         type: "GET",
         success: function (data) {
             var data_obj = JSON.parse(data);
-            data_obj.result.songs.forEach(function (item, index) {
-                // console.log(item.album.id);
-                var information = "<tr data-id='" +
-                    item.id +
-                    "'data-name='" +
-                    item.name +
-                    "'data-artist='" +
-                    item.artists[0].name +
-                    "'data-album='" +
-                    item.album.name +
-                    "'data-imgurl='" +
-                    item.artists[0].img1v1Url +
-                    "'data-albumid='" +
-                    item.album.id +
-                    "'> " +
-                    "<td>" +
-                    item.name +
-                    "</td>" +
-                    "<td>" +
-                    item.artists[0].name +
-                    "</td>" +
-                    "<td>" +
-                    item.album.name +
-                    "</td>" +
-                    "</tr>";
-                $tbody.append(information);
-            })
+            if (data_obj.result.songCount === 0) {
+                $tbody.append('<tr></tr>').append('<h4 class="text-center">未搜索到相关歌曲的信息(；′⌒`)</h4>');
+            } else {
+                data_obj.result.songs.forEach(function (item, index) {
+                    // console.log(item.album.id);
+                    var information = "<tr data-id='" +
+                        item.id +
+                        "'data-name='" +
+                        item.name +
+                        "'data-artist='" +
+                        item.artists[0].name +
+                        "'data-album='" +
+                        item.album.name +
+                        "'data-imgurl='" +
+                        item.artists[0].img1v1Url +
+                        "'data-albumid='" +
+                        item.album.id +
+                        "'> " +
+                        "<td>" +
+                        item.name +
+                        "</td>" +
+                        "<td>" +
+                        item.artists[0].name +
+                        "</td>" +
+                        "<td>" +
+                        item.album.name +
+                        "</td>" +
+                        "</tr>";
+                    $tbody.append(information);
+                })
+            }
         }
     })
 };
